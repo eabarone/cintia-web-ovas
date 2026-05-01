@@ -84,7 +84,7 @@ Ante cualquier duda de cómo debe verse algo, consulta ese archivo.
 ## ⚠️ Reglas importantes
 
 - **No modificar** el layout base (sidebar, mobile header, footer de créditos).
-- **Gamificación obligatoria** en Contenido y Actividades: puntos, misiones, insignias, progreso visible.
+- **Gamificación obligatoria** en Contenido y Actividades: puntos, misiones, insignias, progreso visible — siempre **contenida dentro de la sección donde aplica**. Ningún elemento de gamificación puede salir a modificar el layout global (sin barras flotantes, sin `position: fixed`, sin tocar sidebar ni footer).
 - **No incrustar iframes** de YouTube ni inventar URLs — usar las cards de recurso externo.
 - **No agregar controles de voz propios** — el plugin de accesibilidad ya los incluye.
 - **No omitir** el plugin de accesibilidad al final del `<body>`:  

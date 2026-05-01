@@ -125,6 +125,12 @@ Las secciones de **Contenido** y **Actividades** deben aplicar estrategias de ga
 
 Cada acordeón de contenido debe tener al menos **una mecánica de gamificación** integrada. Las actividades deben sentirse como **misiones**, no como tareas.
 
+> ⚠️ **Límite obligatorio**: toda mecánica de gamificación debe estar **contenida dentro de la sección Contenido o Actividades**. Ninguna estrategia de gamificación puede modificar el layout global del OVA. Esto significa:
+> - **NO** agregar barras de progreso globales fuera de una sección.
+> - **NO** mostrar puntajes flotantes, overlays, ni elementos fijos (`position: fixed`) relacionados con gamificación.
+> - **NO** modificar el sidebar, el header mobile ni el footer.
+> - Los contadores de puntos, barras de progreso e insignias solo existen **dentro del bloque de contenido o actividad** donde aplican.
+
 ### Recursos externos multimedia (videos, simuladores, etc.)
 
 Cuando el contenido de un acordeón se beneficiaría de un video, simulador u otro recurso externo, la IA **debe** insertar una card de recurso externo en ese lugar. **Nunca** incrustar un `<iframe>` de YouTube ni inventar URLs.
