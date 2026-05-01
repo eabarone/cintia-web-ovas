@@ -2,7 +2,7 @@
 
 Repositorio de **Objetos Virtuales de Aprendizaje (OVAs)** interactivos en formato web, desarrollados para estudiantes de último año de bachillerato del programa técnico.
 
-Cada OVA es una página HTML autocontenida con elementos visuales, actividades prácticas y consolas interactivas.
+Cada OVA es una página HTML autocontenida con elementos visuales, actividades prácticas gamificadas e interactividad sin depender de frameworks externos.
 
 ---
 
@@ -12,8 +12,11 @@ Cada OVA es una página HTML autocontenida con elementos visuales, actividades p
 cintia-web-ovas/
 ├── README.md               ← Estás aquí
 ├── context.md              ← Instrucciones para la IA (léelas antes de crear un OVA)
-├── template/               ← Plantilla vacía lista para usar
-│   └── index.html
+├── PROMPT_GUIDE.md         ← Guía paso a paso para crear OVAs con IA
+├── template/               ← Plantilla vacía oficial — punto de partida para nuevos OVAs
+│   ├── index.html
+│   └── img/
+│       └── logo.webp       ← Logo compartido por todos los OVAs
 ├── semestre_1/
 │   └── tecnico/
 │       ├── matematicas/
@@ -33,24 +36,36 @@ cintia-web-ovas/
 
 ### Paso 1 — Prepara tu carpeta
 
-1. Copia la carpeta `template/` y renómbrala con el tema del OVA.  
+1. Copia la carpeta `template/` completa (ya incluye `img/logo.webp`) y renómbrala con el tema del OVA.  
    Ejemplo: `semestre_1/tecnico/matematicas/trigonometria/`
-2. Agrega el logo del OVA en `img/logo.webp`.
-3. Agrega las imágenes QR de los recursos en `img/`.
+2. Agrega las imágenes QR de los recursos en `img/` (una por cada recurso de la sección Recursos).
 
-### Paso 2 — Abre tu modelo de IA preferido
+### Paso 2 — Prepara tu guía de aprendizaje
 
-Puedes usar **ChatGPT, Gemini, Claude, Copilot** o cualquier otro modelo de lenguaje.
+Escribe tu guía en formato Markdown con las secciones del OVA: Introducción, Objetivos, Contenido, Actividades, Recursos y Bibliografía. La IA usará esta guía como base y la enriquecerá con información de internet.
 
-### Paso 3 — Dale el contexto al modelo
+> 💡 No necesita ser perfecta — un esquema con los puntos clave es suficiente.
 
-Copia y pega el contenido completo del archivo `context.md` al inicio de tu conversación con la IA, **antes de cualquier instrucción**.
+### Paso 3 — Dale el contexto a la IA
 
-> 💡 El archivo `context.md` contiene todas las reglas de diseño, estructura y comportamiento que la IA debe seguir para que el OVA sea consistente con los demás.
+Si usas un **editor con agente integrado** (Windsurf, Cursor, Copilot, etc.), dile al agente:
+```
+Lee el archivo context.md que está en la raíz del repositorio y memoriza sus reglas.
+```
 
-### Paso 4 — Haz tu solicitud
+Si usas un modelo web sin acceso a archivos (ChatGPT, Gemini, Claude web), copia y pega el contenido de `context.md` directamente en el chat.
 
-Después de pegar el contexto, escribe tu instrucción. Puedes usar la plantilla de prompt del archivo [`PROMPT_GUIDE.md`](./PROMPT_GUIDE.md).
+### Paso 4 — Genera el OVA
+
+Usa la plantilla de prompt del archivo [`PROMPT_GUIDE.md`](./PROMPT_GUIDE.md), pega tu guía de aprendizaje en el bloque indicado y envíalo. La IA generará el OVA completo.
+
+### Paso 5 — Activa los recursos externos
+
+El OVA generado tendrá **cards verdes** donde la IA sugiere videos o recursos externos. Para activarlas, busca el recurso y dile al agente en el chat:
+```
+Encontré un recurso para el recurso-ext-1. URL: [url] Título: [título]
+```
+El agente edita el archivo directamente — sin tocar código.
 
 ---
 
@@ -69,9 +84,12 @@ Ante cualquier duda de cómo debe verse algo, consulta ese archivo.
 ## ⚠️ Reglas importantes
 
 - **No modificar** el layout base (sidebar, mobile header, footer de créditos).
+- **Gamificación obligatoria** en Contenido y Actividades: puntos, misiones, insignias, progreso visible.
+- **No incrustar iframes** de YouTube ni inventar URLs — usar las cards de recurso externo.
+- **No agregar controles de voz propios** — el plugin de accesibilidad ya los incluye.
 - **No omitir** el plugin de accesibilidad al final del `<body>`:  
   `<script src="https://elens.ecodestudio.dev/elens.js"></script>`
-- **Siempre incluir** las secciones: Introducción, Objetivos, Contenido, Actividades, Evaluación, Recursos, Bibliografía.
+- **Siempre incluir** las 7 secciones: Introducción, Objetivos, Contenido, Actividades, Evaluación, Recursos, Bibliografía.
 - Cada recurso debe tener su imagen QR en `img/`.
 
 ---
