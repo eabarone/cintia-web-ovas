@@ -42,9 +42,16 @@ cintia-web-ovas/
 
 ### Paso 2 — Prepara tu guía de aprendizaje
 
-Escribe tu guía en formato Markdown con las secciones del OVA: Introducción, Objetivos, Contenido, Actividades, Recursos y Bibliografía. La IA usará esta guía como base y la enriquecerá con información de internet.
+Si ya tienes tu guía escrita en **Word**, conviértela a Markdown usando una de estas páginas:
 
-> 💡 No necesita ser perfecta — un esquema con los puntos clave es suficiente.
+- 🔗 https://word2md.com/
+- 🔗 https://www.word2md.net/es
+
+> ⚠️ Estas páginas entregan dos cosas: el **texto en Markdown** y una **vista previa**. Usa solo el texto Markdown (el código), no la vista previa visual.
+
+Si no tienes Word, escribe tu guía directamente en Markdown con las secciones del OVA: Introducción, Objetivos, Contenido, Actividades, Recursos y Bibliografía.
+
+> 💡 No necesita ser perfecta — un esquema con los puntos clave es suficiente. La IA enriquecerá el contenido con información de internet.
 
 ### Paso 3 — Dale el contexto a la IA
 
