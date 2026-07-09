@@ -67,12 +67,17 @@ Copia el siguiente bloque, pega tu guía donde se indica y envíalo:
 ```
 Crea un OVA completo en HTML siguiendo todas las reglas del context.md que ya tienes.
 
-Te entrego mi guía de aprendizaje en Markdown. Úsala como base de contenido.
-Complementa cada sección con información adicional de valor que encuentres en internet:
-datos relevantes, ejemplos actuales, curiosidades, comparaciones, estadísticas, etc.
-El OVA debe tener el contenido de mi guía MÁS el contenido enriquecido que tú agregues.
-La sección de Evaluación (quiz) debes construirla tú a partir del contenido de la guía y el material que encuentres;
-no te la proporciono, genérala con al menos 5 preguntas de selección múltiple bien redactadas y con dificultad progresiva.
+Te entrego mi guía de aprendizaje en Markdown. Respeta este mapeo de secciones:
+- Introducción, Objetivos, Actividades, Recursos y Bibliografía: MANTÉN el contenido de mi guía
+  (mismos objetivos, mismas actividades, mismos recursos/anexos y misma bibliografía), solo adáptalos
+  al formato web interactivo con emojis, estilo y gamificación en las actividades.
+- Contenido: es el ÚNICO apartado donde puedes poner información distinta y complementaria a la guía.
+  Investiga en internet y enriquece con ángulos, datos, contexto, cifras o casos que amplíen el tema,
+  sin repetir literalmente el desarrollo del contenido de mi guía. Aquí van los elementos interactivos.
+- Evaluación: constrúyela tú desde cero (mi guía no la trae), con al menos 5 preguntas de selección
+  múltiple de dificultad progresiva.
+IMPORTANTE: el OVA NUNCA debe mencionar la guía ni comparar ambos recursos ("lo que la guía no te
+contó", "a diferencia de la guía", etc. están prohibidos). El estudiante lo vive como un recurso natural.
 
 Información del OVA:
 - Materia: [Ej: Matemáticas / Biología / Historia / Programación / etc.]
@@ -176,7 +181,7 @@ Diferencias clave: pared celular, cloroplasto, vacuola
 
 ## ⚠️ Consejos importantes
 
-- **Cuanto más completa sea tu guía, mejor será el OVA** — no te limites a un esquema si tienes el contenido listo.
+- **Recuerda el mapeo de secciones** — Introducción, Objetivos, Actividades, Recursos y Bibliografía se mantienen desde tu guía; solo el apartado **Contenido** lleva información complementaria distinta; la **Evaluación** es nueva. El OVA nunca menciona la guía.
 - **Siempre pide gamificación explícitamente** en el prompt (misiones, puntos, insignias); si no lo pides, la IA puede omitirla.
 - **La IA debe buscar en internet** para enriquecer el contenido; si no lo hace, agrégale al prompt: *"Busca información adicional en internet para enriquecer cada sección"*.
 - **Recursos externos (videos, simuladores)**: la IA insertará cards verdes donde sugiere un recurso. Tu flujo es: busca el video o recurso → dílelo al agente en el chat: *"Encontré un recurso para el recurso-ext-1. URL: [url] Título: [título]"* → el agente actualiza el archivo directamente. No necesitas copiar ni pegar código.

@@ -23,6 +23,16 @@ Los OVAs son **guías prácticas**, NO libros de teoría. Esto significa:
 - El estudiante debe **hacer** más de lo que lee: responder, arrastrar, seleccionar, ejecutar, calcular, explorar.
 - **Más clicks, menos lectura**: cada sección debe invitar al usuario a interactuar antes de explicar.
 
+## Relación con la guía de aprendizaje del curso (mapeo de secciones — regla obligatoria)
+
+El OVA se construye a partir de la guía de aprendizaje del curso. Cada sección del OVA tiene una relación **definida y fija** con la guía. Respetar este mapeo es obligatorio:
+
+- **Introducción, Objetivos, Actividades, Recursos y Bibliografía → SE MANTIENEN.** Estas cinco secciones reflejan el contenido de la guía de aprendizaje: los mismos objetivos, las mismas actividades, los mismos recursos/anexos y la misma bibliografía. Se adaptan al formato web interactivo (emojis, estilo visual, gamificación en las actividades), pero su **sustancia es la misma que la de la guía**. No se inventan objetivos, actividades ni recursos distintos a los de la guía.
+- **Contenido → ES EL ÚNICO APARTADO QUE PUEDE (Y DEBE) CONTENER INFORMACIÓN DIFERENTE Y COMPLEMENTARIA** a la guía. Aquí es donde el OVA aporta valor adicional: ángulos, ejemplos, datos, contexto histórico, cifras, casos o profundizaciones que amplían el tema **sin repetir literalmente el "Desarrollo del contenido" de la guía**. Es la sección interactiva central del OVA.
+- **Evaluación → ES COMPLETAMENTE NUEVA.** La guía de aprendizaje no incluye evaluación (quiz). La IA la construye desde cero, con mínimo 5 preguntas de selección múltiple de dificultad progresiva, cubriendo tanto los conceptos del tema como el contenido complementario del OVA.
+
+**Regla de tono (obligatoria):** el OVA **nunca debe hacer referencia a la guía de aprendizaje ni comentar la relación entre ambos recursos.** Están prohibidas frases como "lo que tu guía no te contó", "a diferencia de la guía", "esto complementa tu guía", "estas actividades son distintas a las de tu guía", etc. El estudiante no necesita saber cómo se construyó el material: vive el OVA como un recurso completo y natural por sí mismo.
+
 ## Estructura de cada OVA
 
 Cada OVA sigue una estructura consistente:

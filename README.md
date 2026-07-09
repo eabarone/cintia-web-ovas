@@ -90,6 +90,7 @@ Ante cualquier duda de cómo debe verse algo, consulta ese archivo.
 
 ## ⚠️ Reglas importantes
 
+- **Mapeo de secciones con la guía de aprendizaje** (ver "Relación con la guía de aprendizaje" en `context.md`): Introducción, Objetivos, Actividades, Recursos y Bibliografía **se mantienen** desde la guía; **Contenido** es el único apartado que puede llevar información distinta/complementaria; **Evaluación** es completamente nueva (la guía no la tiene). El OVA **nunca menciona la guía** ni compara ambos recursos.
 - **No modificar** el layout base (sidebar, mobile header, footer de créditos).
 - **Gamificación obligatoria** en Contenido y Actividades: puntos, misiones, insignias, progreso visible — siempre **contenida dentro de la sección donde aplica**. Ningún elemento de gamificación puede salir a modificar el layout global (sin barras flotantes, sin `position: fixed`, sin tocar sidebar ni footer).
 - **No incrustar iframes** de YouTube ni inventar URLs — usar las cards de recurso externo.
