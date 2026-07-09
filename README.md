@@ -1,12 +1,14 @@
 # 📚 CINTIA Web OVAs
 
-Repositorio de **Objetos Virtuales de Aprendizaje (OVAs)** interactivos en formato web, desarrollados para estudiantes de último año de bachillerato del programa técnico.
+Repositorio de **Objetos Virtuales de Aprendizaje (OVAs)** interactivos en formato web, desarrollados para estudiantes de último año de bachillerato de los programas de formación (técnico, tecnológico y afines).
 
 Cada OVA es una página HTML autocontenida con elementos visuales, actividades prácticas gamificadas e interactividad sin depender de frameworks externos.
 
 ---
 
 ## 📁 Estructura del repositorio
+
+En la raíz hay elementos fijos y, junto a ellos, las carpetas de OVAs organizadas por una **convención de nombres**:
 
 ```
 cintia-web-ovas/
@@ -17,18 +19,16 @@ cintia-web-ovas/
 │   ├── index.html
 │   └── img/
 │       └── logo.webp       ← Logo compartido por todos los OVAs
-├── semestre_1/
-│   └── tecnico/
-│       ├── matematicas/
-│       └── programacion-web/
-└── semestre_2/
-    └── tecnico/
-        ├── backend/
-        │   ├── unidad_1/
-        │   ├── unidad_2/
-        │   └── Unidad_3/
-        └── base_de_datos/
+└── semestre_<N>/                    ← Una carpeta por semestre (semestre_1, semestre_2, …)
+    └── <programa>/                  ← Programa académico (p. ej. tecnico, tecnologia)
+        └── <curso-o-area>/          ← Curso o área (p. ej. matematicas, backend)
+            └── [unidad_<N>/]        ← Opcional: agrupa los OVAs de un curso por unidad
+                └── <tema-del-ova>/  ← Un OVA por carpeta
+                    ├── index.html
+                    └── img/         ← Logo + imágenes QR de los recursos del OVA
 ```
+
+> 🔁 **El repositorio crece agregando carpetas que sigan esta convención.** No hace falta actualizar este README al añadir un nuevo semestre, programa, curso o OVA: basta con respetar el patrón de nombres anterior.
 
 ---
 
