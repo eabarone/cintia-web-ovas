@@ -15,6 +15,7 @@ cintia-web-ovas/
 ├── README.md               ← Estás aquí
 ├── context.md              ← Instrucciones para la IA (léelas antes de crear un OVA)
 ├── PROMPT_GUIDE.md         ← Guía paso a paso para crear OVAs con IA
+├── ARREGLAR-TAILWIND.md    ← Prompt para arreglar OVAs viejos que se ven sin estilos
 ├── template/               ← Plantilla vacía oficial — punto de partida para nuevos OVAs
 │   ├── index.html
 │   └── img/
@@ -66,7 +67,15 @@ Si usas un modelo web sin acceso a archivos (ChatGPT, Gemini, Claude web), copia
 
 Usa la plantilla de prompt del archivo [`PROMPT_GUIDE.md`](./PROMPT_GUIDE.md), pega tu guía de aprendizaje en el bloque indicado y envíalo. La IA generará el OVA completo.
 
-### Paso 5 — Activa los recursos externos
+### Paso 5 — Hornea el Tailwind local del OVA
+
+Los OVAs usan Tailwind **horneado localmente** (no desde CDN, que ya no funciona). Cada OVA lleva su propio `tailwind.css`. Dile al agente que lo genere, o ejecútalo tú dentro de la carpeta del OVA:
+```
+npx tailwindcss@3.4.17 -o tailwind.css --content "./**/*.{html,js}" --minify
+```
+Sin este paso el OVA se ve sin estilos. Repite el comando si luego cambian las clases. Ver detalles en `context.md` → "Tailwind local".
+
+### Paso 6 — Activa los recursos externos
 
 El OVA generado tendrá **cards verdes** donde la IA sugiere videos o recursos externos. Para activarlas, busca el recurso y dile al agente en el chat:
 ```
@@ -97,6 +106,7 @@ Ante cualquier duda de cómo debe verse algo, consulta ese archivo.
 - **No agregar controles de voz propios** — el plugin de accesibilidad ya los incluye.
 - **No omitir** el plugin de accesibilidad al final del `<body>`:  
   `<script src="https://elens.ecodestudio.dev/elens.js"></script>`
+- **Tailwind local, nunca CDN.** No usar `<script src="https://cdn.tailwindcss.com">` (está descontinuado). Cada OVA lleva su propio `tailwind.css` horneado en su carpeta y enlazado con `<link rel="stylesheet" href="tailwind.css">`. Ver "Tailwind local" en `context.md`.
 - **Siempre incluir** las 7 secciones: Introducción, Objetivos, Contenido, Actividades, Evaluación, Recursos, Bibliografía.
 - Cada recurso debe tener su imagen QR en `img/`.
 

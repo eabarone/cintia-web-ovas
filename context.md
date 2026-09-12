@@ -46,10 +46,27 @@ Cada OVA sigue una estructura consistente:
 
 ## Tecnologías usadas
 
-- **HTML + TailwindCSS** (via CDN) para layout y estilos.
+- **HTML + TailwindCSS** para layout y estilos. **⚠️ Tailwind se usa HORNEADO LOCALMENTE, NO desde CDN** (ver "Tailwind local (obligatorio)"). Cada OVA lleva su propio `tailwind.css` en su carpeta.
 - **JavaScript vanilla** para interactividad (simuladores, acordeones, navegación, cuestionarios, etc.).
 - **Google Fonts (Poppins)** para tipografía.
 - Imágenes en formato `.webp`.
+
+## Tailwind local (obligatorio)
+
+El CDN de Tailwind (`cdn.tailwindcss.com`) **quedó descontinuado y ya no funciona**: cualquier OVA que dependa de él pierde todo su diseño. Por eso **cada OVA debe ser autónomo** y llevar su propio Tailwind horneado localmente.
+
+Reglas:
+
+- **NUNCA** usar `<script src="https://cdn.tailwindcss.com"></script>` (ni ningún CDN de Tailwind).
+- En el `<head>`, Tailwind se enlaza como archivo local: `<link rel="stylesheet" href="tailwind.css">`.
+- Ese `tailwind.css` se genera con la CLI oficial de Tailwind, escaneando **solo la carpeta del propio OVA** (así cada OVA es independiente de la estructura del repo). Comando estándar, ejecutado **dentro de la carpeta del OVA**:
+
+  ```bash
+  npx tailwindcss@3.4.17 -o tailwind.css --content "./**/*.{html,js}" --minify
+  ```
+
+- **Cada vez que se crea un OVA o se le agregan/quitan clases**, hay que volver a correr ese comando en su carpeta para regenerar `tailwind.css` (contiene solo las clases que ese OVA usa, incluidas las generadas desde el JavaScript).
+- El `<style>` propio del OVA y el resto del `<head>` (fuentes, plugin de accesibilidad) se mantienen igual.
 
 ## Reglas para interactividad (OVAs de programación)
 
@@ -176,3 +193,4 @@ Este plugin no se debe omitir, modificar ni mover de posición.
 3. Reemplazar únicamente el contenido de las secciones **Contenido** y **Actividades**, siguiendo las reglas de gamificación obligatorias.
 4. Verificar que el logo, créditos, navegación y estilos globales permanezcan intactos.
 5. Ajustar los textos de navegación (nombres de secciones en el menú) solo si el tema lo requiere, sin alterar el estilo visual.
+6. **Hornear el Tailwind local del OVA** (paso obligatorio, ver "Tailwind local"): dentro de la carpeta del OVA, ejecutar `npx tailwindcss@3.4.17 -o tailwind.css --content "./**/*.{html,js}" --minify`. Esto genera el `tailwind.css` que da todo el diseño. Sin este paso, el OVA se ve sin estilos. Repetir el comando si luego se cambian clases.
